@@ -91,8 +91,8 @@ body {
 
 .text {
 		font-size: 20px;
-	position: absolute;
-	top: 0;
+		position: absolute;
+		top: 0;
 		color: white;
 		font-family: Perpetua, Rockwell Extra Bold;
 		text-align: justify;
@@ -142,8 +142,8 @@ h1 {
 	text-transform: uppercase; /* We are capitalizing our headings */
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	text-align: center;
-	margin: 10%;
-	padding: 10%;
+
+	
 		/*margin-top: 50%;  We are adding a small margin above the headings */
 	color: white;	
 	border: none;
@@ -165,6 +165,7 @@ h1 {
 	font-size: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
+	top: 0;
 }
 
 /* Anchor elements */
@@ -193,7 +194,7 @@ img {
 input[type=text] { /* This covers the input sections of the contact form */
 	width: 100%;
 	padding: 12px;
-    border: 1px solid #ccc; /* We are setting a solid border and its colors */
+    border: 1px solid #ccc; /* We .fare setting a solid border and its colors */
     border-radius: 4px; 
     box-sizing: border-box;
     margin-top: 6px;
