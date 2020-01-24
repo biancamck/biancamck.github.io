@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html>
 
+<!--head-->
 <head>
     <meta charset="UTF-8">
     <title>Bianca McKenzie | Software Developer</title>
     <link rel="stylesheet" type="text/css" href="BRM_Portfolio.css">
+    <!-- jQuery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Comfortaa|Economica:700|Maven+Pro|Montserrat|Poiret+One|Rajdhani&display=swap" rel="stylesheet">
 </head>
 
+<!--body-->
+<body class="Background"> 
+    <!-- Fade in effect -->
+    <script> <!-- This script and function controls our fade in effect -->
+      document.body.className += ' fade-out';
+        $(function() {
+          $('body').removeClass('fade-out');
+        }
+      );
 
-<body class="Background">
+    </script>  
 
 <!--navbar-->
     <div class="Navbar">
-        <a class="ative" href="#Home">Home</a>
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
         <a href="#About">About</a>
         <a href="#GitHub">GitHub</a>
-        <a href="#Contact">Contact</a>
+        <a onclick="openForm()" href="#Contact">Contact</a>
     </div>
 
-<!--hOME-->    <br><br>
+    <div class="btn cancel" onclick="closeForm()">
 
-
-<!--VIDEO-->
-<div id="Home">
-    <video autoplay muted loop id="Typing_Video">
-        <source src="media/Typing.mp4" type="video/mp4">
+<!--hOME-->    
+    <div id="Home">
+    <!--VIDEO-->
+        <video autoplay muted loop id="Typing_Video">
+            <source src="media/Typing.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
-            </video>
-
-</div>
+        </video>
+    </div>
 
 <!--VIDEO TEXT-->
     <div class="Video_Text">
         <h1 class="Bianca">Bianca McKenzie</h1>
-            <p class ="text">
+            <p>
                 <strong>
                     <center>
                        <q>Learn from yesterday, live for today, hope for tomorrow. 
@@ -50,17 +64,103 @@
             </p>
     </div>
 
+    <!--slideshow-->
+    <div id="Slideshow">
+        <div id="Slideshow_background">
+            <div id="Slideshow_Container">
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">1 / 6</div>
+                    <img class="Slide_Show_Images" src="media/bianca.png" style="width:100%">
+                        <div class="text">I'm available to assist you on your project!</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">2 / 6</div>
+                    <img class="Slide_Show_Images" src="media/html-js-css.jpeg" style="width:100%">
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">3 / 6</div>
+                    <img class="Slide_Show_Images" src="media/python.png" style="width:100%">
+                        <div class="text">my favorite, and hot new programming language, Python,</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">4 / 6</div>
+                    <img class="Slide_Show_Images" src="media/sql.jpg" style="width:100%">
+                        <div class="text">back end development, databases and SQL<br> (my other specialty).</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">5 / 6</div>
+                    <img class="Slide_Show_Images" src="media/c-sharp-net.png" style="width:100%">
+                        <div class="text">C#, .NET ASP.MET, MVC as well.</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="Slide_Number">6 / 6</div>
+                    <img class="Slide_Show_Images" src="media/coding_1.jpg" style="width:100%">
+                        <div class="text">
+                            <a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+                        </div>
+                </div>
+                
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span> 
+		        <span class="dot" onclick="currentSlide(3)"></span> 
+		        <span class="dot" onclick="currentSlide(4)"></span> 
+		        <span class="dot" onclick="currentSlide(5)"></span> 
+		        <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!--JS slideshow fuctions. if included here, will take precident over js sheet-->
+    <script>
+        var slideIndex = 1;
+          showSlides(slideIndex);
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+      </script>
+
 
 <!--ABOUT-->
     <div class="Row" id="About">
         <div class="Column_2"> <!--left column-->
-            <img src="media/Development.jpg" alt="Laptop">
+            <img src="media/Development0.jpg" alt="Laptop">
         </div>
 
         <div class="Column_1"><!--right column-->
-            <h1>About<br>Bianca</h1>
+            <h1 class="h">About<br>Bianca</h1>
             <div class="overlay">
-                <p class="text"> I'm a Portland native, but have lived in various cities around the world. Traveling is my passion.
+               <br>
+                <p> I'm a Portland native, but have lived in various cities around the world. Traveling is my passion.
                     <br><br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="new">The Tech Academy</a>’s Software Developer Boot Camp, and prior to that, Oregon State University, where I recieved my B.S in Business Management.
                     <br><br>I am trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C#, Python and more. <br><br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below.
                 </p>
@@ -71,37 +171,41 @@
 <!--github section-->    
         <div class="Row" id="GitHub">
             <div class="Column_1"> <!--left col-->
-                <h1>GitHub</h1>
-                <p class="overlay">You can view my coding projects on my GitHub profile here: <a href="https://github.com/bmstorm13" target="new"> Bianca McKenzie: GitHub</a></p>
+                <h1 class="h">GitHub<br>----</h1>
+                <p class="overlay"><br><br><br><br><br><br>You can view my coding projects on my GitHub profile here: <br><a href="https://github.com/bmstorm13" target="new"> Bianca McKenzie: GitHub</a></p>
             </div>
 
             <div class="Column_2"> <!-- Right column -->
                 <img src="media/GitHub.png" alt="GitHub">
             </div>
         </div>
+    <!-- </div> -->
 
 <!--contact section-->
-        <div class="Row" id="Contact">
-            <div class="Column_3"> <!--contact image-->
-                <img src="media/Contact.jpg" alt="contact">
-            </div>
-            
-            <div class="Column_1"> <!--contact form-->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+            <div class="form-popup" id="myForm"> 
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
                 <h1>Contact</h1>
-                <div class="overlay">
-                <form action="" method="get">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email address here">
-                    <Label>Message:</Label>
-                        <input type="text" id="Message" name="Messge" placeholder="Please enter your name here">
-                        <input type="submit" value="Submit">
+                <label for="name"><b>Name</b></label>
+                    <input type="text" placeholder="Type your name here" name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                    <input type="text" placeholder="Enter your phone number here" name="phone">
+                <label for="email"><b>Email</b></label>		
+                    <input type="text" placeholder="Type your email address here" name="email" required>
+                <label for="message"><b>Message</b></label>
+                    <input type="text" placeholder="Type your message here" name="message">
+                
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>   
+                
                 </form>
             </div>
             </div>
         </div>
     </div>
+
+<script src="BRM_portfolio.js"></script>
 
 <footer>
     <p>
