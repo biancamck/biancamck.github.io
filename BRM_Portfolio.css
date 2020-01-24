@@ -273,7 +273,6 @@ center:hover {
 	float: left;  
 	width: 50%; /* This ensures one column takes up half the page width */
 	padding: 10px; 
-	padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
 	height: 400px; /* This sets the height of our column at 400 pixels - if you change the text within the columns, you will need to adjust the column heights accordingly */
 	background-color: #f2f2f2; 
 	position: relative;
@@ -291,6 +290,9 @@ center:hover {
 	font-size: 4.5vw;
 	width:100%;
 	height: 90%;
+	margin-top: 3%;
+	margin-bottom: 0%;
+	
 }
 
 .overlay {
@@ -307,12 +309,13 @@ center:hover {
 	color: white;
 	text-align: center;
 	letter-spacing: .2vw; /* This expands the text slightly */
-	font-size: 2vw;
+	font-size: 1.7vw;
+	padding: 5%;
 }
 
 .Column_1:hover .overlay {
 	opacity: 1;
-	transition-duration: 1s;
+	transition-duration: .5s;
 }
 
 .Column_2 {
