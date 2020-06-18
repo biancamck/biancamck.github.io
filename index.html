@@ -1,30 +1,33 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <!--head-->
 <head>
     <meta charset="UTF-8">
     <title>Bianca McKenzie | Software Developer</title>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="BRM_Portfolio.css">
     <!-- jQuery link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Comfortaa|Economica:700|Maven+Pro|Montserrat|Poiret+One|Rajdhani&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <!--body-->
-<body class="Background"> 
+<body class="Background">
     <!-- Fade in effect -->
-    <script> 
-      document.body.className += ' fade-out';
-        $(function() {
-          $('body').removeClass('fade-out');
+    <!--<script>
+        document.body.className += ' fade-out';
+        $(function () {
+            $('body').removeClass('fade-out');
         }
-      );
+        );
 
-    </script>  
+    </script>-->
 
-<!--navbar-->
+    <!--navbar-->
     <div class="Navbar">
         <a class="active" href="#Home">Home</a>
         <a href="#Slideshow">Slideshow</a>
@@ -34,190 +37,209 @@
     </div>
 
     <!-- <div class="btn cancel" onclick="closeForm()"> -->
-
-<!--hOME-->    
+    <!--hOME-->
     <div id="Home">
-    <!--VIDEO-->
+        <!--VIDEO-->
         <video autoplay muted loop id="Typing_Video">
             <source src="media/Typing.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
     </div>
 
-<!--VIDEO TEXT-->
+    <!--VIDEO TEXT-->
     <div class="Video_Text">
-        <h1 class="Bianca">Bianca McKenzie</h1>
+        <h1 class="Bianca">Bianca<br />McKenzie</h1><br />
+
+        <div class="center">
             <p>
-                <strong>
-                    <center>
-                       <q>Learn from yesterday, live for today, hope for tomorrow. 
-                            <br>The important thing is not to stop questioning.</q>
-                            <br> -Albert Einstein
-                            <br><br><br>
-                            I am Bianca McKenzie, a software developer in Portland, OR. 
-                            <br>Welcome to my portfolio website. 
-                            <br>Here, you can find out about my background and experience and browse through a collection of projects.<br>
-                            <br>Thank you for stopping by, Enjoy!
-                            <br> 
-                    </center>
-                </strong>
+                <q>
+                    Learn from yesterday, live for today, hope for tomorrow.
+                    <br>The important thing is not to stop questioning.
+                </q>
+                <br> -Albert Einstein
+
+                <br><br><br>
+                I am Bianca McKenzie, a full-stack software developer from Portland, OR.
+                <br>Welcome to my portfolio website.
+                <br>Here, you can find out about my background and experience, as well as browse a collection of projects and links to GitHub.<br>
+                <br />Please dont hesitate to contact me for inquiries!
+                </divcenter>
             </p>
-    </div>
+        </div>
 
-    <!--slideshow-->
-    <div id="Slideshow">
-        <div id="Slideshow_background">
-            <div id="Slideshow_Container">
+        <!--slideshow-->
+        <div id="Slideshow">
+            <div id="Slideshow_background">
+                <div id="Slideshow_Container">
 
-                <div class="mySlides fade">
-                    <div class="Slide_Number">1 / 6</div>
-                    <img class="Slide_Show_Images" src="media/bianca.png" style="width:100%">
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">1 / 6</div>
+                        <img class="Slide_Show_Images" src="media/bianca.png" style="width:100%">
                         <div class="text">I'm available to assist you on your project!</div>
-                </div>
+                    </div>
 
-                <div class="mySlides fade">
-                    <div class="Slide_Number">2 / 6</div>
-                    <img class="Slide_Show_Images" src="media/html-js-css.jpeg" style="width:100%">
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">2 / 6</div>
+                        <img class="Slide_Show_Images" src="media/html-js-css.jpeg" style="width:100%">
                         <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
-                </div>
+                    </div>
 
-                <div class="mySlides fade">
-                    <div class="Slide_Number">3 / 6</div>
-                    <img class="Slide_Show_Images" src="media/Python.png" style="width:100%">
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">3 / 6</div>
+                        <img class="Slide_Show_Images" src="media/Python.png" style="width:100%">
                         <div class="text">my favorite, and hot new programming language, Python,</div>
-                </div>
+                    </div>
 
-                <div class="mySlides fade">
-                    <div class="Slide_Number">4 / 6</div>
-                    <img class="Slide_Show_Images" src="media/sql.jpg" style="width:100%">
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">4 / 6</div>
+                        <img class="Slide_Show_Images" src="media/sql.jpg" style="width:100%">
                         <div class="text">back end development, databases and SQL<br> (my other specialty).</div>
-                </div>
+                    </div>
 
-                <div class="mySlides fade">
-                    <div class="Slide_Number">5 / 6</div>
-                    <img class="Slide_Show_Images" src="media/c-sharp-net.png" style="width:100%">
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">5 / 6</div>
+                        <img class="Slide_Show_Images" src="media/c-sharp-net.png" style="width:100%">
                         <div class="text">C#, .NET ASP.MET, MVC as well.</div>
-                </div>
+                    </div>
 
-                <div class="mySlides fade">
-                    <div class="Slide_Number">6 / 6</div>
-                    <img class="Slide_Show_Images" src="media/Coding_1.jpg" style="width:100%">
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">6 / 6</div>
+                        <img class="Slide_Show_Images" src="media/Coding_1.jpg" style="width:100%">
                         <div class="text">
                             <a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
                         </div>
-                </div>
-                
+                    </div>
+
                     <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="Next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span> 
-		        <span class="dot" onclick="currentSlide(3)"></span> 
-		        <span class="dot" onclick="currentSlide(4)"></span> 
-		        <span class="dot" onclick="currentSlide(5)"></span> 
-		        <span class="dot" onclick="currentSlide(6)"></span>
-            </div>
-        </div>
-    </div>
-
-    <!--JS slideshow fuctions. if included here, will take precident over js sheet-->
-    <script>
-        var slideIndex = 1;
-          showSlides(slideIndex);
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-      </script>
-
-
-<!--ABOUT-->
-    <div class="Row" id="About">
-        <div class="Column_2"> <!--left column-->
-            <img src="media/Development0.jpg" alt="Laptop">
-        </div>
-
-        <div class="Column_1"><!--right column-->
-            <h1 class="h">About<br>Bianca</h1>
-            <div class="overlay">
-               <br>
-                <p> I'm a Portland native, but have lived in various cities around the world. Traveling is my passion.
-                    <br><br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="new">The Tech Academy</a>’s Software Developer Boot Camp, and prior to that, Oregon State University, where I recieved my B.S in Business Management.
-                    <br><br>I am trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C#, Python and more. <br><br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below.
-                </p>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="Row" id="About">
-        <div class="Column_1"><!--left column-->
-            <h1 class="h">GitHub<br>-----</h1>
-            <div class="overlay">
-               <br>
-                <p><br><br><br><br><br>You can view my coding projects on my GitHub profile here: 
-                    <br><a href="https://github.com/bmstorm13" target="new"> Bianca McKenzie: GitHub</a>
-                </p>
+        <!--JS slideshow fuctions. if included here, will take precident over js sheet-->
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+
+        <!--ABOUT-->
+        <div class="container-fluid">
+
+            <div class="card-group" id="About">
+
+                <!--left column-->
+                <div class="card cardimg">
+                    <div class="card-body ">
+                        <img src="media/Development0.jpg" alt="Laptop">
+                    </div>
+                </div>
+
+                <div class="card cardtext">
+                    <!--right column-->
+                    <div class="card-body">
+                        <h2 class="card-title">About Bianca<br>-----</h2>
+                        <p class="card-text">
+                            I'm a Portland native, but have lived in various cities around the world. Traveling is my passion.
+                            <br><br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="new">The Tech Academy</a>’s Software Developer Boot Camp, and prior to that, Oregon State University, where I recieved my B.S in Business Management.
+                            <br><br>I am trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C#, Python and more. <br><br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below.
+                        </p>
+                    </div>
+                </div>
             </div>
+
+            <div class="card-group" id="Github">
+                <!--left column-->
+                <div class="card cardtext">
+                    <div class="card-body ">
+                        <h2 class="card-title">GitHub<br>-----</h2>
+                        <p class="card-text">
+                            You can view my coding projects on my GitHub profile here:
+                            <br><a href="https://github.com/bmstorm13" target="new"> Bianca McKenzie: GitHub</a>
+                        </p>
+                        <img src="media/GitHub.png" alt="GitHub" class="gitimg">
+                    </div>
+                </div>
+
+                <div class="card cardimg">
+                    <!--right column-->
+                    <div class="card-body">
+                        <h2 class="card-title">Projects<br>-----</h2>
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-        
-        <div class="Column_2"> <!--right column-->
-            <img src="media/GitHub.png" alt="GitHub">
-        </div>
-
-        
-    </div>
 
 
-<!--contact section-->
+
+        <!--contact section-->
         <div id="Contact">
             <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
-            <div class="form-popup" id="myForm"> 
-                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
-                <h1>Contact</h1>
-                <label for="name"><b>Name</b></label>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+                    <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
                     <input type="text" placeholder="Type your name here" name="name" required>
-                <label for="phone"><b>Phone</b></label>
+                    <label for="phone"><b>Phone</b></label>
                     <input type="text" placeholder="Enter your phone number here" name="phone">
-                <label for="email"><b>Email</b></label>		
+                    <label for="email"><b>Email</b></label>
                     <input type="text" placeholder="Type your email address here" name="email" required>
-                <label for="message"><b>Message</b></label>
+                    <label for="message"><b>Message</b></label>
                     <input type="text" placeholder="Type your message here" name="message">
-                
+
                     <button type="submit" class="btn">SUBMIT</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>   
-                
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+
                 </form>
             </div>
-            </div>
+        </div>
         <!-- </div>
-    </div> -->
+        </div> -->
 
-<script src="BRM_portfolio.js"></script>
+        <script src="BRM_portfolio.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-<footer>
-    <p>
-        <center>&copy Prosper Consulting Inc.,  <a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
-    </p>
-</footer>
+        <footer>
+            <p>
+                <center>&copy Prosper Consulting Inc.,  <a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
+            </p>
+        </footer>
 
 </body>
 </html>
