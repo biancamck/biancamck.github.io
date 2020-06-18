@@ -122,10 +122,10 @@ body {
 
 /* Text over the video */
 .Video_Text {
-    background: rgba(0, 0, 0, 0.7); /* This provides a semi-transparent background for the text to sit over */
+    background: rgba(0, 0, 0, 0.8); /* This provides a semi-transparent background for the text to sit over */
     color: white;
     width: 100%;
-    padding-top: 5%;
+    padding: 5%;
     margin-top: 15%;
     margin-bottom:5%;
     margin-right:5%;
@@ -133,7 +133,7 @@ body {
     position: relative;
     -webkit-animation: moveNav 4s; /* Safari 4.0 - 8.0 */
     animation: movevideoText 4s;
-    font-weight: 500;
+    font-weight: 800;
 }
 
 
@@ -165,9 +165,11 @@ body {
 
 /*slideshow styling */
 #Slideshow_background {
-    background: rgba(255,255,255, 0.35); 
-   margin-bottom:5%;
+    background: rgba(255,255,255, 0.35); /*slightly transparent white over video */
+}
 
+.mySlides {
+    display: none;
 }
 
 @-webkit-keyframes fade {
@@ -203,9 +205,9 @@ body {
 /* Images contained within slideshow */
 .Slide_Show_Images {
     vertical-align: middle;
-    max-height:400px;
+    height: auto;
     box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
-    width: auto;
+    width: 80%;
     border-radius: 50px;
 }
 
@@ -245,7 +247,7 @@ body {
 /* slideshow text */
 .text {
     color: white;
-    padding: 2vw;
+    padding: 1vw;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -297,36 +299,37 @@ body {
 }
 
 
+
 /*about and Git cards*/
 
 
 .cardimg {
-    color: black;
+    color: white;
     padding: 1%;
     background-color: gray;
-    
+    font-weight: 900;
 }
 
 .cardtext {
     font-weight: 900;
     padding: 1%;
     background-color: #4d4d4d;
-    font-weight: 900;
+    color:white;
 }
 
 .gitimg {
-   margin-top:10%;
-   margin-bottom: 5%;
-   max-height:200px;
+   /*margin-top:10%;
+   margin-bottom: 5%;*/
+   max-height:300px;
    width:auto;
    /*margin-left:15%;
    margin-right:auto;*/
-    
-}
+    }
 
 /* Anchor elements */
 a {
-    color: blue; /* We are ensuring all links are blue */
+    color: lightblue; 
+    
 }
 
 /* Quotation elements */
