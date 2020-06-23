@@ -87,14 +87,14 @@ body {
 
 /* Navbar hover effect */
 .Navbar a:hover {
-    background-color: #F4F4F4; /*  This defines the background color that will display when you hover over the text on the navbar */
+    background-color: #a78593; /*  This defines the background color that will display when you hover over the text on the navbar */
     color: black; /* This defines the font color that will display when you hover over the text on the navbar */
     font-weight: bold; /* This makes the text on the navbar bold when hovered over */
 }
 
 /* Navbar home button */
 .Navbar a.active { /* The active selector styles a link */
-    background-color: darkgray; /* This specifies the background color behind the Home button on the navbar */
+    background-color: #8d2f56; /* This specifies the background color behind the Home button on the navbar */
 }
 
 /*video zoom*/
@@ -126,8 +126,8 @@ body {
     color: white;
     width: 100%;
     padding: 5%;
-    margin-top: 15%;
-    margin-bottom:5%;
+    margin-top: 10%;
+    margin-bottom:10%;
     margin-right:5%;
     margin-left5%;
     position: relative;
@@ -136,6 +136,10 @@ body {
     font-weight: 800;
 }
 
+.bimg {
+    width: 30%;
+    border-radius: 50%;
+}
 
 /* Bianca heading style */
 .Bianca {
@@ -165,7 +169,7 @@ body {
 
 /*slideshow styling */
 #Slideshow_background {
-    background: rgba(255,255,255, 0.35); /*slightly transparent white over video */
+    background: rgba(0,0,0,.5); /*slightly transparent white over video */
 }
 
 .mySlides {
@@ -308,13 +312,19 @@ body {
     padding: 1%;
     background-color: gray;
     font-weight: 900;
+    margin: 2%;
+    border: solid 3px #8d2f56;
+    border-radius: 25px 25px 25px 25px;
 }
 
 .cardtext {
     font-weight: 900;
     padding: 1%;
     background-color: #4d4d4d;
-    color:white;
+    color: white;
+    margin: 2%;
+    border: solid 3px #8d2f56;
+    border-radius: 25px 25px 25px 25px;
 }
 
 .gitimg {
@@ -342,7 +352,7 @@ q {
 /* Image elements */
 img {
     filter: grayscale(75%); /* This rids our pictures of 75% of their color */
-    border-radius: 8px; /* This causes our images to have slightly rounded edges */
+    border-radius: 10px; /* This causes our images to have slightly rounded edges */
     max-width: 100%;
     margin-top: 5%;
     margin-bottom:5%;
@@ -350,6 +360,11 @@ img {
     margin-right: auto;
     display: block; /* By specifying block display we can ensure our images are able to be centered */
    
+}
+
+.linksimg
+{
+    border-radius: 25px;
 }
 
     /* Image element hover effects */
@@ -375,36 +390,40 @@ img {
 .Pop_Up_Button {
     bottom: 1.75vw;
     right: 1.75vw;
-    width: 25vw;
-    height: 6vw;
-    background-color: rgb(169, 169, 169, .5);
+    /*width: 25vw;
+    height: 6vw;*/
+    background-color: #8d2f56;
     letter-spacing: .5vw;
     /*font-size: 1em;*/
     font-weight: 900;
     font-family: 'Poiret One', cursive;
-    color: black;
-    border: 2px solid black;
+    color: white;
+    border: 2px solid white;
     cursor: pointer;
     position: fixed;
     -webkit-animation: movePopup 5s;
     animation: movePopup 5s;
 }
-
-/*popup form hidden by default*/
-.form-popup {
-    border: 3px solid #f0f1f0;
-    z-index: 8;
-    display: none;
-    position: fixed;
-    bottom: 6px;
-    right: 6px;
-}
+    .Pop_Up_Button:hover {
+        background-color: black;
+        color:white;
+    }
+    /*popup form hidden by default*/
+    .form-popup {
+        border: 3px solid #f0f1f0;
+        z-index: 8;
+        display: none;
+        position: fixed;
+        bottom: 6px;
+        right: 6px;
+    }
 
 /*form styling*/
 .form-container {
     max-width: 49vw;
     padding: 9px;
-    background-color: white;
+    background-color: #a78593;
+    color: white;
 }
 
     /* Input fields */
@@ -413,15 +432,17 @@ img {
         padding: .93vw;
         margin: .6vw 0 .6vw 0;
         border: none;
-        background: Gainsboro;
+        background: white;
         font-family: Helvetica, Avant Garde;
         font-size: 1vw;
+        color: black;
+        
     }
 
     /* Submit button */
     .form-container .btn {
-        background-color: white;
-        color: black;
+        background-color: black;
+        color: white;
         border-color: black;
         margin-bottom: 1vh;
     }
@@ -436,24 +457,25 @@ img {
     /*button hover effects*/
     button:hover, .form-container .btn:hover {
         color: white;
-        background-color: black;
+        background-color: #8d2f56;
         -webkit-transition-duration: 1s;
-        transition-duration: 1s;
+        transition-duration: .5s;
         border-style: solid;
         border-color: silver;
     }
 
     .form-container .cancel:hover {
         color: white;
-        background-color: darkred;
+        background-color: #8d2f56;
         -webkit-transition-duration: 1s;
-        transition-duration: 1s;
+        transition-duration: .5s;
         border-style: solid;
         border-color: black;
     }
 
 /* Footer element */
 footer {
+    margin-top:5%;
     padding: 2%;
     background-color: white;
 }
